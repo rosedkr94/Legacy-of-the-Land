@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Playball&display=swap');
+
+:root{
+    --color-primary-font: #efe3c2;
+    --color-secondary-font: #123524;
+    --color-incio-bg: #123524;
+    --color-inicio-primary: #85a947;
+    --color-inicio-secondary: #3e7b27;
+}
+
+body{
+    margin: 0;
+    font-family: 'Oregano', sans-serif;
+    background-color: var(--color-incio-bg);
+    color: var(--color-primary-font);
+    background-image: url('../assets/bgchoose.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 40px 60px;
+    width: 90%;
+    max-width: 800px;
+   
+}
+
+.sub-game {
+    font-size: 6rem;
+    font-family: 'Oregano', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2.5rem;
+    color: var(--color-primary-font);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #2e7d32; /* Fondo de las tarjetas de los íconos */
+    border-radius: 8px;
+    padding: 4px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 210px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.card img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Estilos para el pop-up (modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 50px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: 'Oregano', cursive;
+    line-height: 1.6;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    overflow-y: hidden;
+    color: var(--color-primary-font);
+}
+
+.modal-content h3 {
+    font-family: 'Playball', cursive;
+    font-size: 2.8rem;
+    margin-top: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content .hero {
+    font-weight: sans-serif;
+    color: var(--color-inicio-primary);
+}
+
+.close-button {
+    color: var(--color-inicio-secondary);
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-inicio-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-button {
+    padding: 12px 30px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-family: 'Playball', cursive;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 1rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+.modal-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "id": "north",
+    "themeColor": "#E52020", 
+    "secondaryColor": "#FBA518",
+    "backgroundUrl": "assets/bgnorth.jpg", 
+    
+    "slides": [
+        {
+            "type": "narrative",
+            "text": "Hello, I am the Earth Mother! Our region is being attacked by wildfires and drought.",
+            "dynamicContent": ""
+        },
+        {
+            "type": "narrative",
+            "text": "Your mission will be to analyze the satellite information we have available and make a decision to save our crops in the summer.",
+            "dynamicContent": "" 
+        },
+         {
+            "type": "narrative",
+            "text": "The satellite information we will use for our region is provided by NASA Worldview, and below I will show you the past and the future so you know how to use it.",
+            "dynamicContent": ""
+        },
+         {
+            "type": "evidence",
+            "text": "Analyze the past. The purple in the river confirms the severe La Niña drought. This teaches you that your priority is to retain water.",
+            "dynamicContent": "../assets/worldview_nea.gif"
+        },
+        {
+            "type": "evidence",
+            "text": "Now, look at the forecast. Look at the red and yellow colors the river water is bringing. That is the land we already lost due to erosion from the El Niño rains. This is the map of what we must avoid.",
+            "dynamicContent": "../assets/nea_pronostico.gif"
+        },
+        {
+            "type": "quiz_prompt",
+            "text": "The NASA Worldview analysis is clear: if we plant without protection, the harvest will be lost. Can you point out a practice that protects us from drought and erosion?",
+            "dynamicContent": ""
+        }
+    ],
+    
+    "quiz": {
+        "question": "What tillage practice would you have implemented to protect my soil from drought and erosion, and secure your harvest?",
+        "options": [
+            "A: Conventional Tillage. (Plowing the soil and leaving it bare)",
+            "B: No-Till Farming / Direct Seeding. (Leaving crop residue on the soil)",
+            "C: Leaving the Land Fallow. (Not planting and waiting for rain)"
+        ],
+        "correctAnswerIndex": 1, 
+        "winMessage": "CONGRATULATIONS! You have saved the harvest.",
+        "loseMessage": "Unfortunately, you have not managed to save your harvest. Try again.",
+        "winAction": "return_to_selection", 
+        "loseAction": "return_to_main_menu" 
+    }
+
+}

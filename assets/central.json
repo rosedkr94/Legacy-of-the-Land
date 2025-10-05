@@ -1,0 +1,54 @@
+{
+    "id": "central",
+    "themeColor": "#537D5D", 
+    "secondaryColor": "#D2D0A0",
+    "backgroundUrl": "assets/bgcentral.jpg", 
+    
+    "slides": [
+        {
+            "type": "narrative",
+            "text": "Hello, I am the Pampa Spirit! Our region is the most productive, but the severe drought is forcing us to cancel planting.",
+            "dynamicContent": ""
+        },
+        {
+            "type": "narrative",
+            "text": "Your mission is to analyze CONAE's satellite information to find hidden water and save our harvest.",
+            "dynamicContent": "" 
+        },
+         {
+            "type": "narrative",
+            "text": "The information we will use is from CONAE's SAOCOM satellite. Below, I will show you the analysis of the Moisture Profile so you know how to use it.",
+            "dynamicContent": ""
+        },
+         {
+            "type": "evidence",
+            "text": "Look at the general map. The red and yellow colors tell you the surface is dry. If you trust your eyes, you'll cancel planting.",
+            "dynamicContent": "../assets/CONAE_MOD.png"
+        },
+        {
+            "type": "evidence",
+            "text": "Now, look at what SAOCOM really sees. The blue and green colors reveal that there is a stable water reserve starting at 60 cm. This hidden water is enough if we are precise.",
+            "dynamicContent": "../assets/bsas.png"
+        },
+        {
+            "type": "quiz_prompt",
+            "text": "SAOCOM's analysis gave you the most precise data: there is a water reserve, but it is limited. How would you risk planting, knowing the water needs to last longer?",
+            "dynamicContent": ""
+        }
+    ],
+    
+    "quiz": {
+        "question": "Which decision aligns with our precision analysis, allowing us to plant and conserve the reserve moisture?",
+        "options": [
+            "A: Cancel Planting",
+            "B: Reduce Planting Density. (Fewer plants consume less reserve water)",
+            "C: Plant Normal Density"
+        ],
+        "correctAnswerIndex": 1, 
+        "winMessage": "CONGRATULATIONS! You have saved the harvest.",
+        "loseMessage": "Unfortunately, you have not managed to save your harvest. Try again.",
+        "winAction": "return_to_selection", 
+        "loseAction": "return_to_main_menu" 
+    }
+
+}

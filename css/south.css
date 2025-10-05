@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Playball&display=swap');
+
+:root {
+    --region-theme-color: #0e46a3; 
+    --region-secondary-color: #9AC8CD; 
+    /* La URL de fondo se inyecta desde JavaScript */
+    --color-primary-font: #efe3c2; 
+    --color-secondary-font: #d8dad9; 
+    --color-danger: #dc3545; 
+    --color-success: #101a53; 
+}
+
+
+.oculto {
+    display: none !important;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Oregano', sans-serif;
+    color: var(--color-primary-font);
+    
+    /* Carga la imagen de fondo de la heroína inyectada por el JS */
+    background-image: url(../assets/bgsouth.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+#slide-content-area {
+   
+max-width: 650px; 
+width: 90%; 
+position: absolute;
+left: 19%;
+top: 4%;
+transform: translateX(0);
+margin: 0 auto; 
+transform: translateX(-20%);
+padding-top: 10vh;   
+padding-left: 0; 
+padding-right: 0;
+text-align: left;
+box-sizing: border-box;
+
+}
+
+
+.slide-content {
+    min-height: 450px; 
+}
+
+.slide-text {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    display: block; 
+    color: var(--color-primary-font); 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1.0); 
+}
+
+
+.evidence-area {
+    padding: 9px;
+    border: 2px solid var(--region-secondary-color);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    max-width: 500px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.dynamic-evidence-image {
+    max-width: 100%;
+    max-height: 300px; 
+    display: block;
+    margin: 0 auto;
+}
+
+
+.quiz-question {
+    font-size: 2.2rem;
+    color: var(--color-primary-font);
+    margin-bottom: 25px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 30px;
+    font-family: 'Playball', cursive;
+    font-size: 1.8rem; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: var(--region-theme-color); 
+    color: var(--color-secondary-font);
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--region-secondary-color);
+    transform: scale(1.02);
+}
+
+.quiz-option-btn {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    transition: background-color 0.4s;
+}
+
+.correct-answer {
+    background-color: var(--color-success) !important;
+    color: white !important;
+    box-shadow: 0 0 10px var(--color-success);
+}
+
+.wrong-answer {
+    background-color: var(--color-danger) !important;
+    color: white !important;
+    opacity: 0.6; 
+}
+
+.result-message {
+    font-size: 2.5rem;
+    margin: 40px 0;
+    line-height: 1.3;
+}

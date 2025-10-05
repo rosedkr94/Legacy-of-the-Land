@@ -1,0 +1,54 @@
+{
+    "id": "south",
+    "themeColor": "#0E46A3", 
+    "secondaryColor": "#9AC8CD",
+    "backgroundUrl": "assets/bgsouth.jpg", 
+    
+    "slides": [
+        {
+            "type": "narrative",
+            "text": "Hello. I am the Icy Giant! My region is under attack by a drought that has pushed our pastures to the limit.",
+            "dynamicContent": ""
+        },
+        {
+            "type": "narrative",
+            "text": "Your mission is to analyze satellite information to save our livestock.",
+            "dynamicContent": "" 
+        },
+         {
+            "type": "narrative",
+            "text": "We will use two pieces of NASA data to understand why the pasture is in danger. Next, I will show you how to interpret the Evaporative Stress Index (ESI) and the state of the vegetation (NDVI).",
+            "dynamicContent": ""
+        },
+         {
+            "type": "evidence",
+            "text": "Look at the Evaporative Stress Index (ESI). The red and yellow colors confirm the severe water stress. This tells you the grass is weak and needs time to recover. You must conserve it!",
+            "dynamicContent": "../assets/map (3).png"
+        },
+        {
+            "type": "evidence",
+            "text": "And the NDVI (Vegetation Index) confirms that the pastures have low density. If you leave the livestock in those fields, catastrophic overgrazing will occur, ruining the land for years.",
+            "dynamicContent": "../assets/map (2).png"
+        },
+        {
+            "type": "quiz_prompt",
+            "text": "The NASA analysis is clear: the pasture is at its limit. Which is the grazing plan you must implement to conserve the pasture's health and save the cattle?",
+            "dynamicContent": ""
+        }
+    ],
+    
+    "quiz": {
+        "question": "What decision aligns with the analysis of the Evaporative Stress Index (ESI) to secure the livestock's feed and conserve the pasture's health?",
+        "options": [
+            "A: Leave the livestock in the stressed field until the drought improves",
+            "B: Move the livestock and implement pasture rotation Based on the Least Stressed Areas (the ESI).",
+            "C: Move the livestock to reserve pastures immediately."
+        ],
+        "correctAnswerIndex": 1, 
+        "winMessage": "CONGRATULATIONS! You have saved the livestock.",
+        "loseMessage": "Unfortunately, you have not managed to save your livestock. Try again.",
+        "winAction": "return_to_selection", 
+        "loseAction": "return_to_main_menu" 
+    }
+
+}

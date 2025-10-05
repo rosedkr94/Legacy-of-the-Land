@@ -1,0 +1,31 @@
+{
+    "regions": {
+        "north": {
+            "title": "Northern Region",
+            "description": "A land shaped by millennia, where the energy of the ancestral can be felt with every step. Its strength lies not in technology, but in the magic of the land and the power of the community spirit, which manifests through ancient rituals and secrets.",
+            "hero": "Hero: The Earth Mother. Wise, patient, and protective, she knows the secrets of nature and the stars. Only those with a deep respect for her mysteries will be able to earn her blessing.",
+            "color": "#efe3c2",
+            "border": "5px solid #e52020",
+            "buttonText": "Begin",
+            "buttonColor": "border: 2px solid; color: #000000; background: #fba518;"
+        },
+        "central": {
+            "title": "Central Region",
+            "description": "A vast, endless plain, the productive heart of the nation. Here, the horizon is the only limit, and wealth arises from fertile soil and tireless work. This region is for those who value freedom and honor.",
+            "hero": "Hero: The Pampa Spirit. A free and elusive spirit that represents the strength of the gaucho and tradition. It dislikes conflict but can be an invaluable ally in situations of justice and honor.",
+            "color": "#efe3c2",
+            "border": "5px solid #537d5d",
+            "buttonText": "Begin",
+            "buttonColor": "border: 2px solid; color: #000000; background: #d2d0a0;"
+        },
+        "south": {
+            "title": "Southern Region",
+            "description": "A territory of epic beauty and untamable nature. Its power lies in the control of the elements and the ability to survive in the most hostile environments. This region challenges the bravest and most solitary.",
+            "hero": "Hero: The Glacial Giant. A stoic and primordial entity that controls glaciers, mountains, and icy winds. Only those who demonstrate an unwavering will can earn the respect of this silent guardian.",
+            "color": "#efe3c2",
+            "border": "5px solid #0e46a3",
+            "buttonText": "Begin",
+            "buttonColor": "border: 2px solid; color: #000000; background: #9ac8cd;"
+        }
+    }
+}

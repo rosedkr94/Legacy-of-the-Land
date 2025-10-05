@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Playball&display=swap');
+
+
+:root{
+    --color-primary-font: #efe3c2; 
+    --color-secondary-font: #123524; 
+    --color-incio-bg: #123524; 
+    --color-inicio-primary: #85a947; 
+    --color-inicio-secondary: #3e7b27; 
+    --color-narrative-bg-overlay: rgba(0, 0, 0, 0.75); 
+    --color-danger: #dc3545; 
+}
+
+
+/* ======================================= */
+/* 1. CLASES DE OCULTAMIENTO (¡CRUCIALES!) */
+/* ======================================= */
+
+/* Estas clases son usadas por el JavaScript para ocultar/mostrar */
+.oculto {
+    display: none !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ======================================= */
+/* 2. Estilos Base y Contenedor */
+/* ======================================= */
+body {
+    margin: 0;
+    font-family: 'Oregano', sans-serif; 
+    color: var(--color-primary-font);
+    background-image: url('../assets/bgvideo.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* [AÑADIDO] Estilos del Contenedor de la Narrativa (Sin fondo para que flote) */
+.narrative-container {
+    padding: 40px 60px;
+    border-radius: 12px;
+    max-width: 800px;
+}
+
+
+/* ======================================= */
+/* 3. Estilos de Texto y Botones */
+/* ======================================= */
+
+#narrative-text {
+    font-family: 'Oregano', sans-serif;
+    font-size: 4.5rem; 
+    line-height: 1.4;
+    font-weight: 400; 
+    /* Sombra del texto reforzada para máxima legibilidad sobre el fondo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+    min-height: 120px; 
+    margin-bottom: 25px;
+}
+
+
+.btn {
+    padding: 15px 35px;
+    font-family: 'Playball', cursive;
+    font-size: 2.2rem; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+    margin: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para que el botón resalte */
+}
+
+/* Estilos de botones (Next, Yes, No) */
+#next-btn, .yes-btn, #choose-region-btn { /* Incluimos el botón final en los estilos principales */
+    color: var(--color-secondary-font);
+    background-color: var(--color-inicio-primary);
+}
+
+#next-btn:hover, .yes-btn:hover, #choose-region-btn:hover {
+    background-color: var(--color-inicio-secondary);
+    transform: scale(1.05);
+    color: var(--color-primary-font);
+}
+
+.no-btn {
+    color: var(--color-primary-font);
+    background-color: var(--color-danger); 
+}
+
+.no-btn:hover {
+    background-color: #f14656; 
+    transform: scale(1.05);
+}
+
+/* [CORRECCIÓN CRUCIAL] ELIMINAMOS la regla de display: none; específica para .question-btns */
+/* Si la tenías, asegúrate de haberla quitado, ya que el JS maneja su visibilidad con .oculto. */
